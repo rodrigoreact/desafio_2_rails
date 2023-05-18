@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Galeria</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
+    <%= javascript_importmap_tags %>
+  </head>
+  <body class="is-preload-0 is-preload-1 is-preload-2">
+    <!-- Main -->
+    <div id="main">
+      <!-- Header -->
+      <header id="header">
+        <h1>Lens</h1>
+        <p>Just another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
+        <p style="margin-right:10px;"><%= link_to "Acerca de la galeria", "/pages/informacion" %></p>
+        <ul class="icons">
+          <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+          <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+      </header>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+    <!-- Dependencias de JavaScript -->
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'breakpoints.min' %>
+    <%= javascript_include_tag 'browser.min' %>
+    <%= javascript_include_tag 'jquery.min' %>
+    <%= javascript_include_tag 'main' %>
+    <script src="https://kit.fontawesome.com/2dbf2bcf5a.js" crossorigin="anonymous"></script>
+  </body>
+</html>
